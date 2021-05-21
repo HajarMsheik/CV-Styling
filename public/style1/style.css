@@ -1,0 +1,183 @@
+
+.content{
+    display: grid;
+    grid-template-columns  : 50% 50% ;
+    grid-template-rows: auto   auto  auto;
+    grid-template-areas: "About Competencies"
+                         "Experiencies   Education"
+                         "Hobbies" ;
+                         padding: 30px;
+                         margin-left: 10%;
+                         margin-right: 10%;
+                         
+}
+
+.about{grid-area: About;}
+.competencies{grid-area:Competencies;}
+.experiences{grid-area:experiences;}
+.education{grid-area:education;}
+.hobbies{grid-area: hobbies;}
+
+.content p{
+  font-family:sans-serif;
+  margin-top: 0.5rem;
+  line-height: 1.2rem;
+  padding:1rem;
+}
+figure img{
+    margin-left:10rem;
+}
+h1{
+    color:red;
+}
+h2{
+    color:red;
+}
+h4{
+    color:red;
+    margin-top: 1rem;
+    line-height: 1.2rem;
+}
+
+.experience-details{
+    color:grey;
+    margin-left: 1rem;;
+}
+.experience-details::before{
+    content:'In';
+ }
+ .experience-date-separator{
+     color:red;
+ }
+#hobbies  ul{
+    margin-left: 1rem;
+    padding:1rem;
+}
+
+
+
+ h3 {
+    font-weight: bold;
+    border-bottom: 1px solid rgb(202, 196, 196);
+    
+}
+h3::before{
+    content: '';
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+    border-radius:2rem ;
+    background-color: red;
+     margin-right: 0.5rem;
+ }
+
+#competencies .skills-primary::before{
+    content: 'Main';
+   
+}
+#competencies .skills-primary::after{
+    content:'Other';
+   
+}
+
+.skill{
+    background-color: rgb(169, 169, 169);
+    padding: 2%;
+    margin: 1%;
+    position: relative;
+    font:14px;
+}
+.skills-primary{
+    margin-bottom:1rem;
+}
+
+.skills-primary div:first-child span{
+    width: 50%;
+    display: block;
+    background-color: red;
+    padding:0.5rem;
+    color: white;   
+
+}
+.skills-primary div:nth-child(2) span{
+    width: 30%;
+    display: block;
+    background-color: red;
+    padding:0.5rem;
+    color: white;
+}
+.skills-primary div:nth-child(3) span{
+    width: 7%;
+    display: block;
+    background-color: red;
+    padding:0.5rem;
+    color: white;
+}
+.skills-secondary div:first-child span{
+    width: 90%;
+    display: block;
+    background-color: rgba(255, 0, 0, 0.7);
+    padding:2%;
+    color: white;
+}
+.skills-secondary div:nth-child(2) span{
+    width:30%;
+    display: block;
+    background-color: rgba(255, 0, 0, 0.7);
+    padding:2%;
+    color: white;
+}
+.skills-secondary div:last-child  span{
+    font-size: 15px;
+    width: 70%;
+    display: block;
+    padding:2%;
+    color: white;
+    background-color: rgba(255, 0, 0, 0.7);
+}
+
+header div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-left: 10%;
+    background-color: rgb(85, 80, 80);   
+}
+div figure{
+  width: 50%;
+}
+
+
+#contact{
+   position:absolute;
+   top:0;
+   right: 0;
+   padding-bottom: 2rem;
+   
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+.contacts dl {
+    display: grid;
+    grid-template-columns  :auto 400px;  
+    line-height: 1.5em;
+   
+}
+.contacts  dt{
+    color: white;
+    background-color: red;  
+}
+.contacts dd{
+    color: red;
+    background-color: black;
+ }
+.contact-value  a{
+    color: red;
+    text-decoration: none;
+}
+#contact h3{
+    visibility: hidden;
+}
+
