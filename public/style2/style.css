@@ -1,3 +1,4 @@
+@media only screen and (min-width: 992px) {
 * {
     box-sizing: border-box;
   }
@@ -10,12 +11,9 @@ h1{
    font-weight: bold;
    color: black;
    margin:3rem;
+   border-bottom: 3px solid rgb(206, 203, 203);
 }
-h1:after {
-    content: " ";
-    display: block;
-    border-bottom: 3px solid rgb(206, 203, 203);
-  }
+
 h2,#about h3{
     visibility:hidden;
 } 
@@ -290,5 +288,288 @@ header> div img{
             background-repeat: no-repeat;
             
           }     
+        }
+    /* /* ////////////////////add queries////////////////////// ///////////////////////////////////////////////////////////////////*/
+     @media only screen and (max-width: 500px) {
+    *{
+        margin:0;
+        padding:0;
+    }
+    h1{
+       font-size:30px; 
+       font-weight: bold;
+       color: black;
+
+       border-bottom: 3px solid rgb(206, 203, 203);
+    }
+    figure{
+      display: none;
+    }
+    h2,#about h3{
+        display: none;
+    } 
+    #contact{
+        display: none;
+    } 
+    .content {
+     width:50%;
     
-     
+      margin: auto;
+    }
+    #about{
+
+      color:grey;
+    
+       /* background-color: greenyellow;  */
+  }
+  #competencies{
+    display:grid;
+    grid-template-columns: auto ;
+    grid-template-rows: auto;
+    margin:1rem;
+    padding:1rem;
+   
+    grid-template-areas: "h3""prim""sec"
+                          ;
+                         
+}
+  
+  .skills-primary{grid-area:prim;}
+  .skills-secondary{grid-area:sec;}
+   h3{grid-area:h3;}
+  
+
+/* first row in competencies */
+.skills-primary{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    padding:1rem;
+    margin-left: 0;
+  
+}
+
+.skills-primary div:first-child span{
+    font-size: 15px;
+    background-color: rgb(5, 88, 70);
+
+    color: white;  
+    
+
+}
+.skills-primary div:nth-child(2) span{
+    font-size: 15;
+    background-color: rgb(5, 88, 70);
+ 
+    color: white;
+   
+
+}
+.skills-primary div:nth-child(3) span{
+    font-size: 15;
+    background-color: rgb(5, 88, 70);
+
+    color: white;
+    
+
+}
+/* ///////////////////////to add stars to first row////////////////////////////// */
+.skills-primary [data-skill="5"] span::after{ 
+    content: "✭✭✭";
+    color:white;
+    
+  }
+  [data-skill="3"] span::after{
+    content: "✭✭";
+    color: white;
+  
+}
+  [data-skill="1"] span::after{
+    content: "✭";
+    color: white;
+ 
+}
+/* /////////////////////////design for skills-secondary//////////////////////////////////////// */
+.skills-secondary{
+    margin-bottom:1rem;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    padding:1rem;
+}
+.skills-secondary div:first-child span{
+    font-size: 10px;
+    background-color: rgb(5, 88, 70);
+    margin: 1rem;
+    padding:0.5rem;
+    color: white;   
+
+}
+.skills-secondary div:nth-child(2) span{
+    font-size: 10px;
+    background-color: rgb(5, 88, 70);
+    margin: 1rem;
+    padding:0.5rem;
+    color: white;
+}
+.skills-secondary div:nth-child(3) span{
+    font-size: 10px;
+    background-color: rgb(5, 88, 70);
+    margin: 1rem;
+    padding:0.5rem;
+    color: white;
+}
+/* ///////////////////////to add stars to second row////////////////////////////// */
+[data-skill="9"] span::after{ 
+    content: "✭✭✭✭✭";
+    color:white;
+    margin-left: 3rem;
+  }
+  [data-skill="7"] span::after{
+    content: "✭✭✭";
+    color: white;
+    margin-left: 3rem;
+}
+  [data-skill="5"] span::after{
+    content: "✭✭✭✭";
+    color: white;
+    margin-left: 3rem;
+}
+/* ////////////////////////Experiences////////////////////////////////////////// */
+#experiences{
+    display:grid;
+    grid-template-columns: 30%, 70% ;
+    grid-template-rows: auto;
+    
+    grid-template-areas: "h3    sec1" 
+                         "h3    sec2";
+                         margin:1rem;
+                         padding:1rem;
+}
+  #experiences .h3{grid-area:h3;}
+  #experiences .div:firstchild{grid-area:sec1;}
+  #experiences .div:last-child{grid-area:sec2;}
+
+  .experience-institution{
+      visibility: hidden;
+  }
+  /* divide the part related to experience data */
+    .experience{
+        display:grid;
+        grid-template-columns: 30% 70% ;
+        grid-template-rows: auto;
+
+        grid-template-areas: "type    experience-details" 
+                             "experience-description   experience-description";
+                             margin-left: 5rem;
+                             
+
+    }
+    
+    .experience-type{grid-area:type;
+       color: rgb(5, 88, 70);
+       margin-top: 2rem;
+    }
+    .experience-details{grid-area:experience-details;}
+    .experience-description{grid-area:experience-description;
+      width:50%;
+      font-family: Geneva;
+      margin-top: rem;
+      
+    }
+    .experience-description{grid-area:experience-description;}
+    .experience-date ,.month,.experience-location{
+        color:gray;
+    }
+    .experience-date-separator{
+        color: rgb(5, 88, 70);
+         
+    }
+    /* ////////////////////////////////////Education part///////////////////////////// */
+    #education{
+        display:grid;
+        grid-template-columns: 30%, 70% ;
+        grid-template-rows: auto;
+        
+        grid-template-areas: "h3    sec1" 
+                             "h3    sec2";
+                             margin:2rem;
+                             padding:1rem;
+                            
+    }
+      #education .h3{grid-area:h3;}
+      #education .div:firstchild{grid-area:sec1;}
+      #education .div:last-child{grid-area:sec2;}
+    /* //////////////////////hobbies/////////////////////////////////////////////////////////// */
+    #hobbies{
+        display:grid;
+        grid-template-columns: 30%, 70% ;
+        grid-template-rows: auto;
+        
+        grid-template-areas: "h3    ul"; 
+                             
+                             margin:2rem;
+                             padding:1rem;
+                            
+    }
+      #hobbies .h3{grid-area:h3;
+    margin-left: 2rem;}
+      #hobbies .ul{grid-area:ul;}
+     li{
+         margin-right: 62rem;
+     }
+     /* ///////////////add the photos//////////////////////////////////////////////////////// */
+    
+    #hobbies ul li:nth-child(1):after {
+            display: block;
+            content: "";
+            background-image: url(/public/images/email.png);
+            background-size: contain;
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            margin-top: 5rem;
+            
+          }
+          #hobbies ul li:nth-child(2)::before {
+            display: block;
+            content: "";
+            background-image: url(/public/images/phone.png);
+            background-size: contain;
+            width: 90px;
+            height: 90px;
+            position: absolute;
+            margin-top: 5rem;
+            margin-left: 7rem;
+           
+          }
+          #hobbies ul li:nth-child(3):after {
+            display: block;
+            content: "";
+            background-image: url(/public/images/github.png);
+            background-size: contain;
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            margin-top: 2rem;
+            margin-left: 15rem;
+            
+          }
+          #hobbies ul li:nth-child(3)::before {
+            display: block;
+            content: "";
+            background-image: url(/public/images/facebook.png);
+            background-size: contain;
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            margin-top: 3rem;
+            margin-left: 24rem;
+            background-repeat: no-repeat;
+            
+          }     
+        }
+  
+       
+
+     }
